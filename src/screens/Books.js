@@ -16,35 +16,35 @@ function Books () {
     const result = location.state;
 
     const navigate = useNavigate();
-    const alreadyFetched = useRef(false);
+    // const alreadyFetched = useRef(false);
 
-    const [price, setPrice] = useState('');
+    // const [price, setPrice] = useState('');
 
     //code taken from React navigation: url:https://reactnavigation.org/docs/navigation-prop/
     const goBack = () => {
 		navigate(-1);
 	};
 
-    //retrieves price from partner's microservice
-    useEffect(() => {
-        function findPrice() {
-            const query = result.title 
-            fetch(`http://127.0.0.1:5000/price?input=${query}`, {
-              mode:'cors'})
-              .then((response) => response.text())
-              .then((data) => {
-              setPrice(data)
-              })
-              .catch(()=> {
-              alert("Uh Oh! You messed up...Try again.")
-              });
-        return price
-        };
-    if (alreadyFetched.current) return;
-    alreadyFetched.current = true;
-    findPrice();
-    console.log("useEffect ran...");
-    }, []);
+    // //retrieves price from partner's microservice
+    // useEffect(() => {
+    //     function findPrice() {
+    //         const query = result.title 
+    //         fetch(`http://127.0.0.1:5000/price?input=${query}`, {
+    //           mode:'cors'})
+    //           .then((response) => response.text())
+    //           .then((data) => {
+    //           setPrice(data)
+    //           })
+    //           .catch(()=> {
+    //           alert("Uh Oh! You messed up...Try again.")
+    //           });
+    //     return price
+    //     };
+    // if (alreadyFetched.current) return;
+    // alreadyFetched.current = true;
+    // findPrice();
+    // console.log("useEffect ran...");
+    // }, []);
     
     return (
         <>
