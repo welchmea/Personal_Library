@@ -7,7 +7,7 @@ function SwitchDb ({id}){
 
     useEffect(() => {
         function switchDB() {
-            fetch('https://git.heroku.com/be-bookshelf.git/switch_db', {
+            fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/switch_db', {
                 mode: 'cors',
                 method: 'POST',
                 headers: {

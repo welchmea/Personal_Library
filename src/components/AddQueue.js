@@ -7,7 +7,7 @@ function AddQueue(props) {
     // adds data to MongoDB queue collection
     useEffect(() => {
         function postData() {
-            fetch('https://git.heroku.com/be-bookshelf.git/add_queue', {
+            fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/add_queue', {
                 mode: 'cors',
                 method: 'POST',
                 headers: {

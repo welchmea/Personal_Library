@@ -7,7 +7,7 @@ function AddLibrary(props) {
     // adds data to MongoDB books collection
     useEffect(() => {
         function postData() {
-            fetch('https://git.heroku.com/be-bookshelf.git/add_db', {
+            fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/add_db', {
                 mode: 'cors',
                 method: 'POST',
                 headers: {

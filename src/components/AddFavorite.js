@@ -6,7 +6,7 @@ function AddFavorite(props) {
     // adds data to MongoDB favorites collection
     useEffect(() => {
         function postData() {
-            fetch('https://git.heroku.com/be-bookshelf.git/add_fav', {
+            fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/add_fav', {
                 mode: 'cors',
                 method: 'POST',
                 headers: {

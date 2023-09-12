@@ -23,7 +23,7 @@ function ViewBook () {
    // calls backend to access MongoDb data through a title, display information 
     useEffect(() => {
         function displayInfo() {
-            fetch('https://git.heroku.com/be-bookshelf.git/display_info', {
+            fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/display_info', {
                 mode: 'cors',
                 method: 'POST',
                 headers: {

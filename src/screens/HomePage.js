@@ -11,7 +11,7 @@ function HomePage( ) {
     // calls MongoDB to retrieve last 10 viewed books 
     useEffect(() => {
         function displayBrowsed() {
-            fetch(`https://git.heroku.com/be-bookshelf.git/display_browsed`, {
+            fetch(`https://be-bookshelf-eb8a2587c2db.herokuapp.com/display_browsed`, {
               mode:'cors'})
               .then((response) => response.json())
               .then((data) => {

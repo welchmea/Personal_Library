@@ -13,7 +13,7 @@ function Favorites () {
     // calls MongoDB favorites collection to display all data
     useEffect(() => {
         function displayBooks() {
-            fetch(`https://git.heroku.com/be-bookshelf.git/display_favorites`, {
+            fetch(`https://be-bookshelf-eb8a2587c2db.herokuapp.com/display_favorites`, {
               mode:'cors'})
               .then((response) => response.json())
               .then((data) => {

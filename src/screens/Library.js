@@ -13,7 +13,7 @@ function Library () {
     // calls MongoDB library collection to display all data
     useEffect(() => {
         function displayBooks() {
-            fetch(`https://git.heroku.com/be-bookshelf.git/display_books`, {
+            fetch(`https://be-bookshelf-eb8a2587c2db.herokuapp.com/display_books`, {
               mode:'cors'})
               .then((response) => response.json())
               .then((data) => {

@@ -7,7 +7,7 @@ function DeleteDb ({id}){
     //deletes a book from the queue or the library 
     useEffect(() => {
         function deleteDB() {
-            fetch('https://git.heroku.com/be-bookshelf.git/delete_db', {
+            fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/delete_db', {
                 mode: 'cors',
                 method: 'POST',
                 headers: {

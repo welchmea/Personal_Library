@@ -13,7 +13,7 @@ function Queue () {
     // calls MongoDB queue collection to retrieve stored data 
     useEffect(() => {
         function displayQueue() {
-            fetch(`https://git.heroku.com/be-bookshelf.git/display_queue`, {
+            fetch(`https://be-bookshelf-eb8a2587c2db.herokuapp.com/display_queue`, {
               mode:'cors'})
               .then((response) => response.json())
               .then((data) => {
