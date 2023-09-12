@@ -26,7 +26,7 @@ function Library () {
     alreadyFetched.current = true;
     displayBooks();
     console.log("useEffect ran...");
-    }, []);
+    }, [library]);
 
     return (
         <>

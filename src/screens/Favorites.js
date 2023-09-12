@@ -20,13 +20,16 @@ function Favorites () {
               setFavorites(data)
               setState(true)
               }) 
+              .catch(()=> {
+                alert("Oh No! Something is wrong...Try again.")
+               });
         return favorites
         };
     if (alreadyFetched.current) return;
     alreadyFetched.current = true;
     displayBooks();
     console.log("useEffect ran...");
-    }, []);
+    }, [favorites]);
 
     return (
         <>

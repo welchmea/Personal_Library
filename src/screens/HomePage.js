@@ -17,6 +17,9 @@ function HomePage( ) {
               .then((data) => {
               setLibrary(data)
               setState(true)
+              .catch(()=> {
+                 alert("Oh No! Something is wrong...Try again.")
+                });
               }) 
         return library
         };
@@ -25,7 +28,7 @@ function HomePage( ) {
     alreadyFetched.current = true;
     displayBrowsed();
     console.log("useEffect ran...");
-    }, []);
+    }, [library]);
     
     return (
         <>
