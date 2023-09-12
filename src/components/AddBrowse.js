@@ -20,7 +20,7 @@ function AddBrowse(props) {
     if (alreadyFetched.current) return;
     alreadyFetched.current = true;
     postBrowse();
-    }, []);
+    }, [props]);
 };
 
 export default AddBrowse;

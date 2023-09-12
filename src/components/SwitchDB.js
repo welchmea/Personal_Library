@@ -24,7 +24,7 @@ function SwitchDb ({id}){
     alreadyFetched.current = true;
     switchDB();
     console.log("useEffect ran...");
-    }, []);
+    }, [id]);
     return (
         <>
         </>

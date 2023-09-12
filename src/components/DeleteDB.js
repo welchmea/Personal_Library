@@ -24,7 +24,7 @@ function DeleteDb ({id}){
     alreadyFetched.current = true;
     deleteDB();
     console.log("useEffect ran...");
-    }, []);
+    }, [id]);
     return (
         <>
         </>

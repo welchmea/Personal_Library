@@ -22,7 +22,7 @@ function AddFavorite(props) {
     if (alreadyFetched.current) return;
     alreadyFetched.current = true;
     postData();
-    }, []);
+    }, [props]);
     return (
         <>
         </>
