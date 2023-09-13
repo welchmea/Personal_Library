@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef} from "react";
 import HomePageRow from "../components/HomePageRow";
 
-function HomePage( ) {
+function HomePage() {
     
     // variables for navigation and displaying browsed data from db
     const [library, setLibrary] = useState();
