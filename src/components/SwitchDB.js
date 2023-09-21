@@ -3,14 +3,13 @@ import React, {useEffect, useRef} from "react";
 // switches a book from the queue to the library on the Queue page
 function SwitchDb ({id}){
 
-    // const alreadyFetched = useRef(false);
-
+    const alreadyFetched = useRef(false);
 
     useEffect(() => {
         const controller = new AbortController();
         const signal = controller.signal;
 
-        // function switchDB() {
+        function switchDB() {
         fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/switch_db', {signal}, {
                 mode: 'cors',
                 method: 'POST',
@@ -24,12 +23,10 @@ function SwitchDb ({id}){
               alert(data, window.location.reload(false))
               })
               
-        return () => {
-            controller.abort();
         };      
-    // if (alreadyFetched.current) return;
-    // alreadyFetched.current = true;
-    // switchDB();
+    if (alreadyFetched.current) return;
+    alreadyFetched.current = true;
+    switchDB();
     }, [id]);
     
     return (
