@@ -24,9 +24,7 @@ function HomePage() {
               .catch(()=> {
                  alert("Oh No! Something is wrong...Try again.")
                 });
-                return library
               })
-
 
         return () => {
             controller.abort(); 
@@ -36,7 +34,6 @@ function HomePage() {
     // if (alreadyFetched.current) return;
     // alreadyFetched.current = true;
     // displayBrowsed();
-
     
     return (
         <>
@@ -54,7 +51,7 @@ function HomePage() {
                         </tr>
                         </thead>
                         <tbody>
-                        { state ? library.map((book, i) => <HomePageRow row={book} key={i}/>):null}     
+                        { state ? {library}.map((book, i) => <HomePageRow row={book} key={i}/>):null}     
                         </tbody>
                     </table>
                 </article> 
