@@ -25,7 +25,6 @@ function Library () {
     if (alreadyFetched.current) return;
     alreadyFetched.current = true;
     displayBooks();
-    console.log("useEffect ran...");
     }, [library]);
 
     return (

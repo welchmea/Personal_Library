@@ -27,7 +27,6 @@ function Search () {
     if (alreadyFetched.current) return;
     alreadyFetched.current = true;
     findBooks();
-    console.log("useEffect ran...");
     }, [inputs, book]);
 
     const books = book

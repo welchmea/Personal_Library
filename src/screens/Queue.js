@@ -25,7 +25,6 @@ function Queue () {
     if (alreadyFetched.current) return;
     alreadyFetched.current = true;
     displayQueue();
-    console.log("useEffect ran...");
     }, [queue]);
 
     return (

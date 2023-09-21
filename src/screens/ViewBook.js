@@ -41,7 +41,6 @@ function ViewBook () {
     if (alreadyFetched.current) return;
     alreadyFetched.current = true;
     displayInfo();
-    console.log("useEffect ran...");
     }, [info, results.title]);
 
     // code taken from React navigation: url:https://reactnavigation.org/docs/navigation-prop/

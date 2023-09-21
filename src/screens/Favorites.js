@@ -25,7 +25,6 @@ function Favorites () {
     if (alreadyFetched.current) return;
     alreadyFetched.current = true;
     displayBooks();
-    console.log("useEffect ran...");
     }, [favorites]);
 
     return (
