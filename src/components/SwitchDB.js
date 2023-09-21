@@ -6,11 +6,8 @@ function SwitchDb ({id}){
     const alreadyFetched = useRef(false);
 
     useEffect(() => {
-        const controller = new AbortController();
-        const signal = controller.signal;
-
         function switchDB() {
-        fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/switch_db', {signal}, {
+        fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/switch_db', {
                 mode: 'cors',
                 method: 'POST',
                 headers: {
@@ -22,7 +19,6 @@ function SwitchDb ({id}){
               .then((data) => {
               alert(data, window.location.reload(false))
               })
-              
         };      
     if (alreadyFetched.current) return;
     alreadyFetched.current = true;
