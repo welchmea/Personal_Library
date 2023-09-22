@@ -10,7 +10,7 @@
 
 body {
   /* background-image: linear-gradient(180deg, rgba(0,0,0,0.7), rgb(248, 237, 237)); */
-  background-image: url(images/freestocks-OfaDD5o8hpk-unsplash.jpg);
+  background-image: url(images/thought-catalog-OJZB0VUQKKc-unsplash.jpg);
   background-size:cover;
   background-attachment: fixed;
   background-position: top left;
@@ -24,16 +24,12 @@ body {
 }
 
 header{
-  padding: 2%;
-  /* border: 2px solid black;
-  border-radius: 2px; */
+  padding: 2em;
   color: black;
   text-align: left;
   font-family: 'Spectral', serif;
-  font-size: 100%;
-  /* background-image: linear-gradient(180deg,  white, rgb(0,0,0)); */
-  /* background-image: linear-gradient(180deg,rgb(248, 237, 237), black);
-  margin-bottom: 2em; */
+  font-size: 140%;
+  margin-bottom: -2em;
 }
 
 /* search bar styling */
@@ -45,8 +41,7 @@ header{
   width: 60%;
   font-family: 'Spectral', serif;
   font-weight: 600;
-  margin-bottom: -1%;
-  margin-top: -2%;
+  margin-bottom: 2%;
  }
  .search_icon {
   font-size: 150%;
@@ -99,8 +94,9 @@ caption {
   border:2px solid black;
   margin-bottom: 3px;
   padding: 1%;
-  font-size: 20px;
-  color: black;
+  font-size: 22px;
+  color: white;
+  margin-top: -2%;
 }
 table {
   background-image: linear-gradient(180deg, rgb(248, 237, 237), rgb(0,0,0,0.3));
@@ -151,7 +147,7 @@ table td {
   display: inline-block;
   text-align: center;
   border: 2px solid black;
-  background-color: white;
+  background-color: rgb(255, 247, 247);
   padding: 2%;
  }
 
@@ -213,13 +209,11 @@ table td {
   display: inline-block;
   font-weight: 400;
   font-size: 18px;
-  padding: 0 10px;
+  padding: 4px;
   line-height: 30px;
   text-align: center;
   touch-action: manipulation;
-  /* margin-left: 0px;
-  margin-right: 100px;
-  margin-top: 24px; */
+  margin-bottom: 2%;
 }
 
 .main-button:hover {

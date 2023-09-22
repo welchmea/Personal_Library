@@ -21,7 +21,12 @@ function App() {
 
   return (
     <>
-    <AnimatedCursor/>
+    <AnimatedCursor
+    innerScale={8}
+    outerScale={8}
+    innerSize={8}
+    outerSize={8}
+    color='255, 255, 255'/>
     <BrowserRouter>
     <Header/>
           <main>
