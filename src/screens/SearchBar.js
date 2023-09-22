@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function SearchBar () {
 
 //Updates the input box
   const [input, setInput] = useState('');
-
-  const navigate = useNavigate();
-  const redirect = useNavigate();
-  const route = useNavigate();
-  const favorite = useNavigate();
 
 // reloads window for every new search
   function refreshPage() {
@@ -34,21 +29,6 @@ function SearchBar () {
             <Link to="/Search" state={input}><BsSearch className="search_icon"/></Link> 
           </button>
 
-          <button className="main-button" onClick={()=> route("/")}>
-            Home
-          </button>
-
-          <button className="main-button" onClick={()=>navigate("/Library")}>
-            Bookshelf 
-          </button>
-
-          <button className="main-button" onClick={()=>redirect("/Queue")}>
-            Queue
-          </button>
-
-          <button className="main-button" onClick={()=> favorite("/Favorites")}>
-            Favorites
-          </button>
         </form>
         </>
     )
