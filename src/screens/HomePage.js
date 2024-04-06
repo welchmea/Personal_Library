@@ -40,7 +40,7 @@ function HomePage() {
             <button>reset</button>
           </div>
         </div>
-        <div className="search_results flex gap-8 p-8 w-full justify-center">
+        <div className="search_results flex flex-wrap gap-8 p-8 w-full justify-center">
           {state
             ? library.map((book, i) => <HomePageRow row={book} key={i} />)
             : null}
