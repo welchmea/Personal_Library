@@ -41,8 +41,7 @@ function Favorites() {
           </button>
         </div>
       </div>
-      <div className="flex justify-center search_results p-4">
-        <table className="flex flex-col bg-white w-5/6 border border-black">
+      <div className="search_results text-white">
           <div className="flex flex-row justify-between mx-4">
             <caption>Favorites</caption>
             <div>
@@ -50,21 +49,11 @@ function Favorites() {
             </div>
           </div>
 
-          <thead>
-            <tr>
-              <th className=" ">Cover</th>
-              <th className="">Title</th>
-              <th className="">Author</th>
-              <th className="">Notes</th>
-              <th className="">Delete</th>
-            </tr>
-          </thead>
-        <tbody>
+          <div className="flex flex-wrap gap-8 p-8 w-full justify-center">
           {state
             ? favorites.map((book, i) => <LibraryRow row={book} key={i} />)
             : null}
-        </tbody>
-      </table>
+        </div>
       </div>
     </>
   );

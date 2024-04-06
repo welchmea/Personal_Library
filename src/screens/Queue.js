@@ -39,8 +39,7 @@ function Queue() {
         </div>
       </div>
 
-      <div className="flex justify-center search_results p-4">
-        <table className="flex flex-col bg-white w-5/6 border border-black">
+      <div className="search_results text-white">
           <div className="flex flex-row justify-between mx-4">
             <caption>Queue</caption>
             <div>
@@ -48,22 +47,11 @@ function Queue() {
             </div>
           </div>
 
-          <thead>
-            <tr>
-              <th className=" ">Cover</th>
-              <th className="">Title</th>
-              <th className="">Author</th>
-              <th className="">Move To Bookshelf</th>
-              <th className="">Delete</th>
-            </tr>
-          </thead>
-
-        <tbody>
+          <div className="flex flex-wrap gap-8 p-8 w-full justify-center">
           {state
             ? queue.map((book, i) => <LibraryRow row={book} key={i} />)
             : null}
-        </tbody>
-      </table>
+        </div>
       </div>
     </>
   );

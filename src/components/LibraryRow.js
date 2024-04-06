@@ -17,28 +17,30 @@ function LibraryRow({ row }) {
   }
 
   return (
+    <div className="flex text-white">
     <tr key={row.title}>
-      <td className="border-2 border-gray-500 p-6 bg-gray-300 hover:bg-gray-100">
+      <td className="flex flex-col items-center mb-4">
         <Link to="/ViewBook" state={row}>
-          <img src={row.image} alt="" height={40} width={30}></img>
+          <img src={row.image} alt="" height={300} width={200}></img>
         </Link>
       </td>
-      <td className="border-2 border-gray-500 p-6 bg-gray-300 hover:bg-gray-100">
+      <td className="flex flex-col items-center mb-2">
         {row.title}
       </td>
-      <td className="border-2 border-gray-500 p-6 bg-gray-300 hover:bg-gray-100">
+      <td className="flex flex-col items-center mb-2">
         {row.author[0]}
       </td>
-      <td className="border-2 border-gray-500 p-6 bg-gray-300 hover:bg-gray-100">
-        <button className="bg-gray-300 hover:bg-gray-100" onClick={() => setaddFavorite(true)}>
+      <div className="flex flex-row justify-center">
+      <td className="flex flex-col text-xl">
+        <button className="" onClick={() => setaddFavorite(true)}>
           <i>
-            <AiOutlineHeart className="bg-gray-300 hover:bg-gray-100"/>
+            <AiOutlineHeart className="mr-4"/>
           </i>
         </button>
         {addFavorite ? <AddFavorite result={row} /> : null}
       </td>
 
-      <td className="border-2 border-gray-500 p-6 bg-gray-300 hover:bg-gray-100">
+      <td className="flex text-xl">
         <button onClick={verifyDelete}>
           <i>
             <AiFillDelete />
@@ -46,7 +48,11 @@ function LibraryRow({ row }) {
         </button>
         {render ? <DeleteDb id={row} /> : null}
       </td>
+      </div>
+
     </tr>
+    </div>
+
   );
 }
 
