@@ -29,10 +29,17 @@ function Queue () {
 
     return (
         <>
-        <main>
-            <section>
-                <button className="main-button" onClick={()=>navigate("/")}>Back to Home Page</button>
-                    <article>
+      <div className="flex flex-col items-center p-2 overflow-auto">
+        <div className="text-white p-12 text-3xl">
+          Queue up your next read.
+        </div>
+        <div className="text-white pb-12 text-xl">
+          {" "}
+          <button className="main-button" onClick={() => navigate("/")}>
+            Back to Home Page
+          </button>
+        </div>
+      </div>
                 
                         <table>
                             <caption>Queue</caption>
@@ -42,7 +49,7 @@ function Queue () {
                                     <th>Title</th>
                                     <th>Author</th>
                                     <th>View</th>
-                                    <th>Delete (Cannot undo)</th>
+                                    <th>Delete</th>
                                     <th>Move to Library</th>
                                 </tr>
                             </thead>
@@ -51,9 +58,6 @@ function Queue () {
                                 { state ? queue.map((book, i) => <QueueRow row={book} key={i}/>):null}
                             </tbody>
                         </table>
-                    </article> 
-            </section>
-        </main>
         </>
     )
 };

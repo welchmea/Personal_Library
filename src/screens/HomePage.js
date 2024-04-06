@@ -33,7 +33,13 @@ function HomePage() {
           Track the books that you have read.
         </div>
         <div className="text-white pb-12 text-xl">Queue up your next read.</div>
-        <div className="flex -mb-12 text-sm text-white">Recently Visited</div>
+        <div className="flex flex-row w-full justify-between mb-2 text-sm text-white">
+          <div className="flex justify-end">Recently Visited</div>
+
+          <div className="flex underline text-white">
+            <button>reset</button>
+          </div>
+        </div>
         <div className="search_results flex gap-8 p-8 w-full justify-center">
           {state
             ? library.map((book, i) => <HomePageRow row={book} key={i} />)

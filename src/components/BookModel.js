@@ -6,7 +6,7 @@ function BookModel (props) {
 
   return (
     <>
-    <figure className="images flex flex-col items-center border border-1 border-black mt-8 p-8 ml-8 font-normal gap-y-2">
+    <figure className="images flex flex-col items-center border border-1 border-black mt-8 p-8 ml-8 font-normal gap-y-8">
     <img src={props.image} alt="" width={200} height={300}></img>
       <figcaption>
       <p>{props.title}</p>

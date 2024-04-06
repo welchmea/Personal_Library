@@ -40,8 +40,8 @@ function Books() {
                 width={400}
                 height={500}
               ></img>
-              <div>{result.title}</div>
-              <div>{result.author}</div>
+              <div className="text-xl">{result.title}</div>
+              <div className="italic mt-2 text-md">{result.author}</div>
             </div>
             <div className="flex flex-col gap-y-4 justify-center ml-8 p-2">
               <div>{result.description}</div>
