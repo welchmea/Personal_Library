@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 
 // represents a row in the recently visited table on the Home page
 function HomePageRow({ row }) {
+  
   return (
-    <tr className="flex items-start" key={row.title}>
+    <tr key={row.title}>
       <td>
         <Link
           to="/ViewBook"

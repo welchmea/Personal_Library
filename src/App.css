@@ -119,9 +119,7 @@ table td {
  }
 
  .search_results {
-  border: 2px solid black;
   background-image: linear-gradient(180deg ,#5A66F4, rgb(0,0,0,0.5));
-  margin: 4%;
  }
 
  .images {

@@ -28,13 +28,13 @@ function HomePage() {
 
   return (
     <>
-      <div className="flex flex-col items-center p-2">
+      <div className="flex flex-col items-center p-2 overflow-auto">
         <div className="text-white p-12 text-3xl">
           Track the books that you have read.
         </div>
         <div className="text-white pb-12 text-xl">Queue up your next read.</div>
         <div className="flex -mb-12 text-sm text-white">Recently Visited</div>
-        <div className="search_results flex flex-row overflow-y-auto gap-8 p-8 w-full justify-center">
+        <div className="search_results flex gap-8 p-8 w-full justify-center">
           {state
             ? library.map((book, i) => <HomePageRow row={book} key={i} />)
             : null}
