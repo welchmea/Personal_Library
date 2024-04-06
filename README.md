@@ -4,12 +4,25 @@ Deployed to Heroku: https://fe-bookshelf-6bdf6bf741e2.herokuapp.com
 
 ## Getting Started: 
 
-** Download files from this repository as well as Personal_Library_be
+** Frontend and backend are separate repositories (backend: Personal_Library_be)
 
 ### 1. Clone this repository and the backend
+
+      https://github.com/welchmea/Personal_Library.git
+      
 ### 2. Install dependencies
+
       npm install    
-### 4. Setup .env file for backend
+      
+### 4. Setup .env files
+
+frontend:
+
+      CONNECT_BACK=
+
+backend:
+
+      MONGO_DB_CONN_STRING=
    
 
 
