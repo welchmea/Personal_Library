@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import FavoriteRow from "../components/FavoriteRow";
+import LibraryRow from "../components/LibraryRow";
 
 function Favorites() {
   // variables to display data in library and to render additional components
@@ -41,24 +41,31 @@ function Favorites() {
           </button>
         </div>
       </div>
-      <table>
-        <caption>Favorites</caption>
-        <thead>
-          <tr>
-            <th>Cover</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Notes</th>
-            <th>View</th>
-            <th>Delete (Cannot Undo)</th>
-          </tr>
-        </thead>
+      <div className="flex justify-center search_results p-4">
+        <table className="flex flex-col bg-white w-5/6 border border-black">
+          <div className="flex flex-row justify-between mx-4">
+            <caption>Favorites</caption>
+            <div>
+              <button>reset</button>
+            </div>
+          </div>
+
+          <thead>
+            <tr>
+              <th className=" ">Cover</th>
+              <th className="">Title</th>
+              <th className="">Author</th>
+              <th className="">Notes</th>
+              <th className="">Delete</th>
+            </tr>
+          </thead>
         <tbody>
           {state
-            ? favorites.map((book, i) => <FavoriteRow row={book} key={i} />)
+            ? favorites.map((book, i) => <LibraryRow row={book} key={i} />)
             : null}
         </tbody>
       </table>
+      </div>
     </>
   );
 }

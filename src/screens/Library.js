@@ -41,7 +41,7 @@ function Library() {
         </div>
       </div>
 
-      <div className="flex justify-center bg-[#5A66F4] p-4">
+      <div className="flex justify-center search_results p-4">
         <table className="flex flex-col bg-white w-5/6 border border-black">
           <div className="flex flex-row justify-between mx-4">
             <caption>Bookshelf</caption>
@@ -52,7 +52,7 @@ function Library() {
 
           <thead>
             <tr>
-              <th className=" ">Cover</th>
+              <th className="">Cover</th>
               <th className="">Title</th>
               <th className="">Author</th>
               <th className="">Favorite</th>
