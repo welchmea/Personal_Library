@@ -16,7 +16,6 @@ body {
   font-family: 'Spectral', serif;
   margin:0;
   padding: 0;
-  text-align: center;
   font-weight: 600;
   overflow-y: scroll !important;
   background-color: black;
@@ -84,25 +83,10 @@ header{
   font-size: 80%;
  }
 
- .icon-five {
-  color:black;
-  font-size: 120%;
- } 
-
-/* caption {
-  text-align: center;
-  border:2px solid black;
-  margin-bottom: 3px;
-  padding: 1%;
-  font-size: 22px;
-  color: white;
-  margin-top: -2%;
-} */
 table {
   background-image: linear-gradient(180deg, rgb(248, 237, 237), rgb(0,0,0,0.3));
   border-collapse: collapse;
   text-align: center;
-
   width: 90%;
 }
 
@@ -126,10 +110,6 @@ table td {
   background-color: rgb(255, 247, 247);
  }
 
- figcaption {
-  font-size: 130%;
- }
-
 .view-icon {
   border: 1px solid black;
   background-image: linear-gradient(180deg, rgb(244, 222, 222), rgb(0,0,0,0.0));
@@ -137,36 +117,22 @@ table td {
 
 .main-button {
   background-color: rgb(231, 225, 225);
-  font-family: 'Spectral', serif; 
-  border: 2px solid black;
   border-radius: 10px;
-  box-shadow: black 4px 4px 0 0;
   color: black;
-  cursor: pointer;
-  display: inline-block;
   font-weight: 400;
   font-size: 18px;
   padding: 4px;
   line-height: 30px;
   text-align: center;
   touch-action: manipulation;
-  margin-bottom: 2%; 
+  width: 30vh;
 }
 
 .main-button:hover {
-  background-color:black;
-  color: white;
-  border: 2px solid white;
-}
-
-.main-button:active {
-  box-shadow: #422800 2px 2px 0 0;
-  transform: translate(2px, 2px);
-}
-
-.viewButton:hover {
+  background-color:#5A66F4;
   color: white;
 }
+
 .pop-image{
   background-color:rgb(241, 232, 232) ;
   display:inline-block;
