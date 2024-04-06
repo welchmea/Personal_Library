@@ -1,37 +1,37 @@
 import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 
-function SearchBar () {
+function SearchBar() {
 
-//Updates the input box
-  const [input, setInput] = useState('');
+  //Updates the input box and naviagtes to the results page
+  const [input, setInput] = useState("");
+  const navigate = useNavigate();
 
-// reloads window for every new search
-  function refreshPage() {
-    window.location.reload(false);
-  }
-    return (
-        <>
-        <form>
-          <input
-            placeholder="Enter a Book Title or Author. Click search icon ---->"
-            className="search" 
-            value={input}
-            onChange={e => setInput(e.target.value)}>
-          </input>
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      navigate('/Search', { state: input })
+      setInput('');
+    }
+  };
+  return (
+    <>
+      <div className="flex items-center">
+        <input
+          placeholder="Enter a Book Title or Author"
+          className="flex mr-2 rounded-3xl p-1 pl-4 text-sm w-[40vh] font-normal"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => handleKeyDown(e)}
+        ></input>
 
-          <button 
-            className="icon_three"
-            type="submit" 
-            value="search"
-            onClick={refreshPage}>
-            <Link to="/Search" state={input}><BsSearch className="search_icon"/></Link> 
-          </button>
+          <Link to="/Search" state={input}>
+            <BsSearch className="flex text-slate-200 text-md mr-8" />
+          </Link>
 
-        </form>
-        </>
-    )
-};
+      </div>
+    </>
+  );
+}
 
 export default SearchBar;

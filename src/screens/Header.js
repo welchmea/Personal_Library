@@ -1,39 +1,41 @@
-import React from "react";
-import SearchBar from './SearchBar.js';
-import { useNavigate } from "react-router-dom";
+import SearchBar from "./SearchBar.js";
+import { Link } from "react-router-dom";
 
-// Global component that holds search bar and info popout
-function Header () {
+function Header() {
+  return (
+    <>
+      <div className="flex justify-between mt-4 ml-2 mr-2">
+        <div className="flex items-end text-xl text-white ml-2">MY BOOKSHELF</div>
+        <div className="flex flex-row">
+          <SearchBar />
 
-    const navigate = useNavigate();
-    const redirect = useNavigate();
-    const route = useNavigate();
-    const favorite = useNavigate();
+          <Link to="/">
+            <button className="text-black mr-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-500 hover:text-white">
+              Home
+            </button>
+          </Link>
 
-    return (
-        <>
-         <header>
-          <h1 className="title">MY BOOKSHELF</h1>         
-           
-        <button className="main-button" onClick={()=> route("/")}>
-            Home
-          </button>
+          <Link to="/Library">
+            <button className="text-black mr-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-500 hover:text-white">
+              Bookshelf
+            </button>
+          </Link>
 
-          <button className="main-button" onClick={()=>navigate("/Library")}>
-            Bookshelf 
-          </button>
+          <Link to="/Queue">
+            <button className="text-black mr-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-500 hover:text-white">
+              Queue
+            </button>
+          </Link>
 
-          <button className="main-button" onClick={()=>redirect("/Queue")}>
-            Queue
-          </button>
-
-          <button className="main-button" onClick={()=> favorite("/Favorites")}>
-            Favorites
-          </button>
-          <SearchBar/>
-          </header>
-        </>
-    )
-};
+          <Link to="/Favorites">
+            <button className="text-black mr-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-500 hover:text-white">
+              Favorites
+            </button>
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}
 
 export default Header;

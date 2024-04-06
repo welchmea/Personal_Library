@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Josefin+Slab:wght@600&family=Libre+Caslon+Text&family=Lora&display=swap');
 
 :root {
@@ -10,32 +8,34 @@
 
 body {
   /* background-image: linear-gradient(180deg, rgba(0,0,0,0.7), rgb(248, 237, 237)); */
-  background-image: url(images/thought-catalog-OJZB0VUQKKc-unsplash.jpg);
+  /* background-image: url(images/thought-catalog-OJZB0VUQKKc-unsplash.jpg);
   background-size:cover;
   background-attachment: fixed;
   background-position: top left;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   font-family: 'Spectral', serif;
   margin:0;
   padding: 0;
   text-align: center;
   font-weight: 600;
   overflow-y: scroll !important;
+  background-color: black;
 }
 
 header{
   padding: 2em;
-  color: black;
+  /* color: black; */
+  color: white;
   text-align: left;
   font-family: 'Spectral', serif;
-  font-size: 140%;
+  /* font-size: 140%; */
   margin-bottom: -2em;
 }
 
 /* search bar styling */
 .search {
   color:black;
-  height: 3em;
+  height: 2em;
   border: 2px solid black;
   border-radius:3em;
   width: 60%;
@@ -89,7 +89,7 @@ header{
   font-size: 120%;
  } 
 
-caption {
+/* caption {
   text-align: center;
   border:2px solid black;
   margin-bottom: 3px;
@@ -97,12 +97,12 @@ caption {
   font-size: 22px;
   color: white;
   margin-top: -2%;
-}
+} */
 table {
   background-image: linear-gradient(180deg, rgb(248, 237, 237), rgb(0,0,0,0.3));
   border-collapse: collapse;
   text-align: center;
-  margin: 4%;
+
   width: 90%;
 }
 
@@ -120,27 +120,8 @@ table td {
 
  .search_results {
   border: 2px solid black;
-  background-image: linear-gradient(180deg, rgb(244, 222, 222), rgb(0,0,0,0.5));
+  background-image: linear-gradient(180deg ,#5A66F4, rgb(0,0,0,0.5));
   margin: 4%;
- }
-
- .facts {
-  border: 2px solid black;
-  background-color: rgb(231, 225, 225);
-  font-size: 60%;
- }
-
- /* .count {
-  font-size: 40%;
- } */
-
- input {
-  padding-left: 2%;
-  font-size:20px;
- }
- input::placeholder {
-  font-size: 100%;
-  
  }
 
  .images {
@@ -155,44 +136,6 @@ table td {
   font-size: 130%;
  }
 
- /* popout info box styling */
- .popup-content {
-
-  background:rgb(178, 159, 165);
-  width: 70%;
-  padding: 2%;
-  border: 2px solid rgb(54, 35, 53);
-}
-
-.popup-overlay {
-  background: rgba(0, 0, 0, 0.5);
-}
-[data-popup='tooltip'].popup-overlay {
-  background: transparent;
-}
-
-/* icon popout button */
-.popup {
-  background-color:black;
-  font-size: 35%;
-  padding: 2%;
-  border:0 transparent;
-  margin-right: 2%;
-}
-.popup-icon {
-  font-size: 120%;
-}
- 
-.popup-exit {
-  font-size: 100%;
-  border:0 transparent;
-  background-color: rgb(178, 159, 165);
-}
-
-.more-info-popout {
-  border:0 transparent;
-  background-color: white;
-}
 .view-icon {
   border: 1px solid black;
   background-image: linear-gradient(180deg, rgb(244, 222, 222), rgb(0,0,0,0.0));
@@ -200,7 +143,7 @@ table td {
 
 .main-button {
   background-color: rgb(231, 225, 225);
-  font-family: 'Spectral', serif;
+  font-family: 'Spectral', serif; 
   border: 2px solid black;
   border-radius: 10px;
   box-shadow: black 4px 4px 0 0;
@@ -213,7 +156,7 @@ table td {
   line-height: 30px;
   text-align: center;
   touch-action: manipulation;
-  margin-bottom: 2%;
+  margin-bottom: 2%; 
 }
 
 .main-button:hover {
