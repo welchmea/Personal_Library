@@ -41,24 +41,31 @@ function Library() {
         </div>
       </div>
 
-      <table className="">
-        <caption>Bookshelf</caption>
-        <thead>
-          <tr>
-            <th>Cover</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Favorite</th>
-            <th>View</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {state
-            ? library.map((book, i) => <LibraryRow row={book} key={i} />)
-            : null}
-        </tbody>
-      </table>
+      <div className="flex justify-center bg-[#5A66F4] p-4">
+        <table className="flex flex-col bg-white w-5/6 border border-black">
+          <div className="flex flex-row justify-between mx-4">
+            <caption>Bookshelf</caption>
+            <div>
+              <button>reset</button>
+            </div>
+          </div>
+
+          <thead>
+            <tr>
+              <th className=" ">Cover</th>
+              <th className="">Title</th>
+              <th className="">Author</th>
+              <th className="">Favorite</th>
+              <th className="">Delete</th>
+            </tr>
+          </thead>
+          <tbody className="border border-black">
+            {state
+              ? library.map((book, i) => <LibraryRow row={book} key={i} />)
+              : null}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }
