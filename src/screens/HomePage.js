@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import HomePageRow from "../components/HomePageRow";
 import { ResetDB } from "../components/ResetDB";
 
@@ -6,9 +6,8 @@ function HomePage() {
   // variables for navigation and displaying browsed data from db
   const [library, setLibrary] = useState();
   const [state, setState] = useState(false);
-  const alreadyFetched = useRef(false);
 
-  // calls MongoDB to retrieve last 10 viewed books
+  // calls MongoDB to retrieve last 14 viewed books
   useEffect(() => {
     function displayBrowsed() {
       fetch(`https://be-bookshelf-eb8a2587c2db.herokuapp.com/display_browsed`, {
@@ -21,27 +20,8 @@ function HomePage() {
         });
       return library;
     }
-    // only allows useEffect to run once
-    if (alreadyFetched.current) return;
-    alreadyFetched.current = true;
     displayBrowsed();
   }, [library]);
-
-//  function deleteDB () {
-//     console.log("here")
-//     fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/reset_db', {
-//         mode: 'cors',
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify("browse")
-//       }) 
-//       .then((response) => response.json())
-//       .then((data) => {
-//       alert(data, window.location.reload(false))
-//       })  
-// };
 
   return (
     <>

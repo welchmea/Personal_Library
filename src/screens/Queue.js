@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LibraryRow from "../components/LibraryRow";
 import { ResetDB } from "../components/ResetDB";
@@ -6,7 +6,6 @@ import { ResetDB } from "../components/ResetDB";
 function Queue() {
   // variables to display data in Queue, navigate back to home page
   const navigate = useNavigate();
-  const alreadyFetched = useRef(false);
   const [queue, setQueue] = useState();
   const [state, setState] = useState(false);
 
@@ -23,8 +22,6 @@ function Queue() {
         });
       return queue;
     }
-    if (alreadyFetched.current) return;
-    alreadyFetched.current = true;
     displayQueue();
   }, [queue]);
 

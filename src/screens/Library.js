@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LibraryRow from "../components/LibraryRow";
 import { ResetDB } from "../components/ResetDB";
@@ -6,7 +6,6 @@ import { ResetDB } from "../components/ResetDB";
 function Library() {
   // variables to display data in library and to render additional components
   const navigate = useNavigate();
-  const alreadyFetched = useRef(false);
   const [library, setLibrary] = useState();
   const [state, setState] = useState(false);
 
@@ -23,8 +22,6 @@ function Library() {
         });
       return library;
     }
-    if (alreadyFetched.current) return;
-    alreadyFetched.current = true;
     displayBooks();
   }, [library]);
 
