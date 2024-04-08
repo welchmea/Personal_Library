@@ -30,7 +30,7 @@ function QueueRow ({row}) {
       <div className="flex flex-wrap mb-2 font-normal">{row.author[0]}</div>
       <div className="flex flex-row">
         <div className="flex flex-col text-xl">
-          <button className="" onClick={() => setaddFavorite(true)}>
+          <button className="" onClick={() => setRerender(true)}>
             <i>
               <HiOutlineSwitchHorizontal className="mr-4" />
             </i>
