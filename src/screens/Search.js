@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import BookCards from "../components/BookCards";
 
@@ -9,6 +9,7 @@ function Search() {
 
   // variables to display search results
   const [book, setBook] = useState([]);
+  const alreadyFetched = useRef();
 
   // calls Google Books API with a query, that will set data in a variable and display
   useEffect(() => {
@@ -23,6 +24,8 @@ function Search() {
         });
       return book;
     }
+    if (alreadyFetched.current) return;
+    alreadyFetched.current = true;
     findBooks();
   }, [inputs, book]);
 
