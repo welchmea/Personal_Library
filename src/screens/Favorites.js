@@ -48,7 +48,7 @@ function Favorites() {
           <div className="flex justify-end">Favorites</div>
 
           <div className="flex underline text-white">
-            <button onClick={ResetDB}>reset</button>
+            <button onClick={ResetDB("favorites")}>reset</button>
           </div>
         </div>
       <div className="search_results text-white">

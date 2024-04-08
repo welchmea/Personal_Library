@@ -43,7 +43,7 @@ function Queue() {
           <div className="flex justify-end">Queue</div>
 
           <div className="flex underline text-white">
-            <button onClick={ResetDB}>reset</button>
+            <button onClick={ResetDB("queue")}>reset</button>
           </div>
         </div>
 
