@@ -12,5 +12,6 @@ function ResetDB ( collection ) {
       .then((data) => {
       alert(data, window.location.reload(false))
       })  
+      return
 }
 export default ResetDB;
