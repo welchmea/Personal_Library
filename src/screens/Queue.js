@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LibraryRow from "../components/LibraryRow";
-import ResetDB from "../components/ResetDB";
+import { ResetDB } from "../components/ResetDB";
 
 function Queue() {
   // variables to display data in Queue, navigate back to home page
@@ -43,7 +43,7 @@ function Queue() {
           <div className="flex justify-end">Queue</div>
 
           <div className="flex underline text-white">
-            <button onClick={ResetDB("queue")}>reset</button>
+            <button onClick={() => ResetDB("queue")}>reset</button>
           </div>
         </div>
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LibraryRow from "../components/LibraryRow";
-import ResetDB from "../components/ResetDB";
+import { ResetDB } from "../components/ResetDB";
 
 function Library() {
   // variables to display data in library and to render additional components
@@ -44,7 +44,7 @@ function Library() {
       <div className="flex flex-row w-full justify-between mb-2 text-sm text-white">
       <div className="flex justify-end">Bookshelf </div>
         <div className="flex underline text-white">
-            <button onClick={ResetDB("books")}>reset</button>
+            <button onClick={() => ResetDB("books")}>reset</button>
           </div>
       </div>
 

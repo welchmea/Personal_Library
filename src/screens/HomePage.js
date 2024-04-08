@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import HomePageRow from "../components/HomePageRow";
-import ResetDB from "../components/ResetDB";
+import { ResetDB } from "../components/ResetDB";
 
 function HomePage() {
   // variables for navigation and displaying browsed data from db
@@ -54,7 +54,7 @@ function HomePage() {
           <div className="flex justify-end">Recently Visited</div>
 
           <div className="flex underline text-white">
-            <button onClick={ResetDB("browse")}>reset</button>
+            <button onClick={() => ResetDB("browse")}>reset</button>
           </div>
         </div>
         <div className="search_results flex flex-wrap gap-8 p-8 w-full justify-center">

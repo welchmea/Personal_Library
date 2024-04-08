@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LibraryRow from "../components/LibraryRow";
-import ResetDB from "../components/ResetDB";
+import { ResetDB } from "../components/ResetDB";
 
 function Favorites() {
   // variables to display data in library and to render additional components
@@ -48,7 +48,7 @@ function Favorites() {
           <div className="flex justify-end">Favorites</div>
 
           <div className="flex underline text-white">
-            <button onClick={ResetDB("favorites")}>reset</button>
+            <button onClick={() => ResetDB("favorites")}>reset</button>
           </div>
         </div>
       <div className="search_results text-white">
