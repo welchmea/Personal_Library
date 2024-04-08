@@ -38,16 +38,15 @@ function Queue() {
           </button>
         </div>
       </div>
+      <div className="flex flex-row justify-between mx-4">
+        <caption>Queue</caption>
+        <div>
+          <button>reset</button>
+        </div>
+      </div>
 
       <div className="search_results text-white">
-          <div className="flex flex-row justify-between mx-4">
-            <caption>Queue</caption>
-            <div>
-              <button>reset</button>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-8 p-8 w-full justify-center">
+        <div className="flex flex-wrap gap-8 p-8 w-full justify-center">
           {state
             ? queue.map((book, i) => <LibraryRow row={book} key={i} />)
             : null}

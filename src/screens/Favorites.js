@@ -33,7 +33,9 @@ function Favorites() {
   return (
     <>
       <div className="flex flex-col items-center p-2 overflow-auto">
-        <div className="text-white p-12 text-3xl">Would recommend to a friend.</div>
+        <div className="text-white p-12 text-3xl">
+          Would recommend to a friend.
+        </div>
         <div className="text-white pb-12 text-xl">
           {" "}
           <button className="main-button" onClick={() => navigate("/")}>
@@ -41,15 +43,14 @@ function Favorites() {
           </button>
         </div>
       </div>
+      <div className="flex flex-row justify-between mx-4">
+        <caption>Favorites</caption>
+        <div>
+          <button>reset</button>
+        </div>
+      </div>
       <div className="search_results text-white">
-          <div className="flex flex-row justify-between mx-4">
-            <caption>Favorites</caption>
-            <div>
-              <button>reset</button>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-8 p-8 w-full justify-center">
+        <div className="flex flex-wrap gap-8 p-8 w-full justify-center">
           {state
             ? favorites.map((book, i) => <LibraryRow row={book} key={i} />)
             : null}
