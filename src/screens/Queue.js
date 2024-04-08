@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LibraryRow from "../components/LibraryRow";
+import QueueRow from "../components/LibraryRow";
 import { ResetDB } from "../components/ResetDB";
 
 function Queue() {
@@ -45,9 +45,9 @@ function Queue() {
         </div>
 
       <div className="search_results text-white">
-        <div className="flex flex-wrap gap-8 p-8 w-full justify-center">
+        <div className="flex flex-wrap gap-8 p-8 w-full">
           {state
-            ? queue.map((book, i) => <LibraryRow row={book} key={i} />)
+            ? queue.map((book, i) => <QueueRow row={book} key={i} />)
             : null}
         </div>
       </div>

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import DeleteDb from './DeleteDB';
 import { AiFillDelete } from 'react-icons/ai';
-import { GrView } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
 import {HiOutlineSwitchHorizontal} from 'react-icons/hi';
 import SwitchDB from './SwitchDB';
@@ -21,27 +20,34 @@ function QueueRow ({row}) {
     }
 
     return (
-      <tr key={row.title}> 
-        <td>
-        <img src={row.image} alt="" height={40} width={30}></img>
-        </td>
-        <td>
-          {row.title}
-        </td>
-        <td>
-          {row.author}
-        </td>
-        <td>
-        <Link to="/ViewBook" state={row} ><i><GrView/></i></Link><br/>
-        </td> 
-        <td><button className="view-icon" onClick={verifyDelete} ><i><AiFillDelete className="icon-five"/></i></button>
-        {render ? <DeleteDb id={row}/>: null}
-        </td>
-        <td>
-        <button className="view-icon" onClick={() => setRerender(true)} ><i><HiOutlineSwitchHorizontal className='icon-five'/></i></button>
-        {rerender ? <SwitchDB id={row} />: null}
-        </td>
-      </tr>
+      <div className="text-white" key={row.title}>
+      <div className="flex flex-wrap items-center mb-4">
+        <Link to="/ViewBook" state={row}>
+          <img src={row.image} alt="" height={300} width={200}></img>
+        </Link>
+      </div>
+      <div className="flex flex-wrap max-w-52 mb-2 text-md">{row.title}</div>
+      <div className="flex flex-wrap mb-2 font-normal">{row.author[0]}</div>
+      <div className="flex flex-row">
+        <div className="flex flex-col text-xl">
+          <button className="" onClick={() => setaddFavorite(true)}>
+            <i>
+              <HiOutlineSwitchHorizontal className="mr-4" />
+            </i>
+          </button>
+          {rerender ? <SwitchDB id={row} />: null}
+        </div>
+
+        <div className="flex text-xl">
+          <button onClick={verifyDelete}>
+            <i>
+              <AiFillDelete />
+            </i>
+          </button>
+          {render ? <DeleteDb id={row} /> : null}
+        </div>
+      </div>
+    </div>
 
     )
 };

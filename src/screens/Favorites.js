@@ -49,7 +49,7 @@ function Favorites() {
           </div>
         </div>
       <div className="search_results text-white">
-        <div className="flex flex-wrap gap-8 p-8 w-full justify-center">
+        <div className="flex flex-wrap gap-8 p-8 w-full">
           {state
             ? favorites.map((book, i) => <LibraryRow row={book} key={i} />)
             : null}
