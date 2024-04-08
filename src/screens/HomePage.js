@@ -26,6 +26,22 @@ function HomePage() {
     displayBrowsed();
   }, [library]);
 
+ function deleteDB () {
+    console.log("here")
+    fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/reset_db', {
+        mode: 'cors',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify("browse")
+      }) 
+      .then((response) => response.json())
+      .then((data) => {
+      alert(data, window.location.reload(false))
+      })  
+};
+
   return (
     <>
       <div className="flex flex-col items-center p-2 overflow-auto">
@@ -37,7 +53,7 @@ function HomePage() {
           <div className="flex justify-end">Recently Visited</div>
 
           <div className="flex underline text-white">
-            <button>reset</button>
+            <button onClick={deleteDB}>reset</button>
           </div>
         </div>
         <div className="search_results flex flex-wrap gap-8 p-8 w-full justify-center">
