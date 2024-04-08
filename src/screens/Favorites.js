@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LibraryRow from "../components/LibraryRow";
+import ResetDB from "../components/ResetDB";
 
 function Favorites() {
   // variables to display data in library and to render additional components
@@ -43,12 +44,13 @@ function Favorites() {
           </button>
         </div>
       </div>
-      <div className="flex flex-row justify-between mx-4">
-        <caption>Favorites</caption>
-        <div>
-          <button>reset</button>
+      <div className="flex flex-row w-full justify-between mb-2 text-sm text-white">
+          <div className="flex justify-end">Favorites</div>
+
+          <div className="flex underline text-white">
+            <button onClick={ResetDB}>reset</button>
+          </div>
         </div>
-      </div>
       <div className="search_results text-white">
         <div className="flex flex-wrap gap-8 p-8 w-full justify-center">
           {state

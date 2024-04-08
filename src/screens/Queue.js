@@ -39,12 +39,13 @@ function Queue() {
           </button>
         </div>
       </div>
-      <div className="flex flex-row justify-between mb-2 text-sm text-white">
-        <caption>Queue</caption>
-        <div className="flex underline text-white">
-          <button onClick={ResetDB}>reset</button>
+      <div className="flex flex-row w-full justify-between mb-2 text-sm text-white">
+          <div className="flex justify-end">Queue</div>
+
+          <div className="flex underline text-white">
+            <button onClick={ResetDB}>reset</button>
+          </div>
         </div>
-      </div>
 
       <div className="search_results text-white">
         <div className="flex flex-wrap gap-8 p-8 w-full justify-center">
