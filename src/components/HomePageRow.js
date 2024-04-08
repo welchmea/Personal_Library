@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 function HomePageRow({ row }) {
   
   return (
-    <tr key={row.title}>
-      <td>
+    <div key={row.title}>
+      <div>
         <Link
           to="/ViewBook"
           state={row}
         >
           <img src={row.image} alt="" height={300} width={200}></img>
         </Link>
-      </td>
-    </tr>
+      </div>
+    </div>
   );
 }
 

@@ -37,7 +37,7 @@ function HomePage() {
             <button onClick={() => ResetDB("browse")}>reset</button>
           </div>
         </div>
-        <div className="search_results flex flex-wrap gap-8 p-8 w-full justify-center">
+        <div className="search_results flex flex-wrap w-full p-8 gap-8">
           {state
             ? library.map((book, i) => <HomePageRow row={book} key={i} />)
             : null}

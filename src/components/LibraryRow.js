@@ -17,34 +17,34 @@ function LibraryRow({ row }) {
   }
 
   return (
-    <tr className="text-white" key={row.title}>
-      <td className="flex flex-col items-center mb-4">
+    <div className="text-white" key={row.title}>
+      <div className="flex flex-wrap items-center mb-4">
         <Link to="/ViewBook" state={row}>
           <img src={row.image} alt="" height={300} width={200}></img>
         </Link>
-      </td>
-      <td className="flex flex-col items-center mb-2">{row.title}</td>
-      <td className="flex flex-col items-center mb-2">{row.author[0]}</td>
-      <div className="flex flex-row justify-center">
-        <td className="flex flex-col text-xl">
+      </div>
+      <div className="flex flex-wrap max-w-52 mb-2 text-md">{row.title}</div>
+      <div className="flex flex-wrap mb-2 font-normal">{row.author[0]}</div>
+      <div className="flex flex-row">
+        <div className="flex flex-col text-xl">
           <button className="" onClick={() => setaddFavorite(true)}>
             <i>
               <AiOutlineHeart className="mr-4" />
             </i>
           </button>
           {addFavorite ? <AddFavorite result={row} /> : null}
-        </td>
+        </div>
 
-        <td className="flex text-xl">
+        <div className="flex text-xl">
           <button onClick={verifyDelete}>
             <i>
               <AiFillDelete />
             </i>
           </button>
           {render ? <DeleteDb id={row} /> : null}
-        </td>
+        </div>
       </div>
-    </tr>
+    </div>
   );
 }
 
