@@ -39,8 +39,8 @@ function Library() {
         </div>
       </div>
       <div className="flex flex-row w-full justify-between mb-2 text-sm text-white">
-      <div className="flex justify-end">Bookshelf </div>
-        <div className="flex underline text-white">
+      <div className="flex justify-end ml-4">Bookshelf </div>
+        <div className="flex underline text-white mr-4">
             <button onClick={() => ResetDB("books")}>reset</button>
           </div>
       </div>

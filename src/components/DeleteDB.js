@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import {useEffect, useRef} from "react";
 
 function DeleteDb ({id}){
 
@@ -24,10 +24,5 @@ function DeleteDb ({id}){
     alreadyFetched.current = true;
     deleteDB();
     }, [id]);
-    return (
-        <>
-        </>
-    )
 };
-
 export default DeleteDb;

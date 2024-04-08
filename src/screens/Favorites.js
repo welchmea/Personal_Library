@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LibraryRow from "../components/LibraryRow";
+import FavoriteRow from "../components/FavoriteRow";
 import { ResetDB } from "../components/ResetDB";
 
 function Favorites() {
@@ -42,16 +42,16 @@ function Favorites() {
         </div>
       </div>
       <div className="flex flex-row w-full justify-between mb-2 text-sm text-white">
-          <div className="flex justify-end">Favorites</div>
+          <div className="flex justify-end ml-4">Favorites</div>
 
-          <div className="flex underline text-white">
+          <div className="flex underline text-white mr-4">
             <button onClick={() => ResetDB("favorites")}>reset</button>
           </div>
         </div>
       <div className="search_results text-white">
         <div className="flex flex-wrap gap-8 p-8 w-full">
           {state
-            ? favorites.map((book, i) => <LibraryRow row={book} key={i} />)
+            ? favorites.map((book, i) => <FavoriteRow row={book} key={i} />)
             : null}
         </div>
       </div>

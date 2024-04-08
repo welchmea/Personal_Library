@@ -31,9 +31,9 @@ function HomePage() {
         </div>
         <div className="text-white pb-12 text-xl">Queue up your next read.</div>
         <div className="flex flex-row w-full justify-between mb-2 text-sm text-white">
-          <div className="flex justify-end">Recently Visited</div>
+          <div className="flex justify-end ml-4">Recently Visited</div>
 
-          <div className="flex underline text-white">
+          <div className="flex underline text-white mr-4">
             <button onClick={() => ResetDB("browse")}>reset</button>
           </div>
         </div>

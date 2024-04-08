@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import QueueRow from "../components/LibraryRow";
+import QueueRow from "../components/QueueRow";
 import { ResetDB } from "../components/ResetDB";
 
 function Queue() {
@@ -37,9 +37,9 @@ function Queue() {
         </div>
       </div>
       <div className="flex flex-row w-full justify-between mb-2 text-sm text-white">
-          <div className="flex justify-end">Queue</div>
+          <div className="flex justify-end ml-4">Queue</div>
 
-          <div className="flex underline text-white">
+          <div className="flex underline text-white mr-4">
             <button onClick={() => ResetDB("queue")}>reset</button>
           </div>
         </div>
