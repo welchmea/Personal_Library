@@ -16,7 +16,7 @@ function Books() {
 
   const navigate = useNavigate();
 
-  //code on lines 24/25 taken from React navigation: url:https://reactnavigation.org/docs/navigation-prop/
+  //code on lines 20-22 taken from React navigation: url:https://reactnavigation.org/docs/navigation-prop/
   const goBack = () => {
     navigate(-1);
   };
@@ -56,20 +56,16 @@ function Books() {
             <AddBrowse result={result} />
             <Tooltip title="Add to Bookshelf">
               <button onClick={() => setRender(true)}>
-                <i>
-                  <AiOutlineCheck className="text-lg mr-2" />
-                </i>
+                <AiOutlineCheck className="text-lg mr-2" />
               </button>
-              {render ? <AddLibrary result={result} /> : null}
             </Tooltip>
+            {render ? <AddLibrary result={result} /> : null}
             <Tooltip title="Add to Queue">
               <button onClick={() => setRenderQueue(true)}>
-                <i>
-                  <AiOutlinePlusCircle className="text-lg" />
-                </i>
+                <AiOutlinePlusCircle className="text-lg" />
               </button>
-              {renderQueue ? <AddQueue result={result} /> : null}
             </Tooltip>
+            {renderQueue ? <AddQueue result={result} /> : null}
           </div>
         </div>
       </div>

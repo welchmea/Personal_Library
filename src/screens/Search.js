@@ -29,7 +29,7 @@ function Search() {
     findBooks();
   }, [inputs, book]);
 
-  const books = book;
+  // const books = book;
 
   return (
     <>
@@ -40,7 +40,7 @@ function Search() {
         <div className="text-white pb-12 text-xl">Queue up your next read.</div>
         <div className="flex text-sm text-white">Search Results</div>
         <div className="flex flex-wrap gap-8 search_results w-full mt-4">
-          <BookCards books={books} />
+          <BookCards books={book} />
         </div>
       </div>
     </>
