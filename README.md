@@ -1,4 +1,4 @@
-# Frontend of SWE Project: My Bookshelf
+# Frontend of SWE Project: Personal Library
 
 Deployed to Heroku: https://fe-bookshelf-6bdf6bf741e2.herokuapp.com
 
