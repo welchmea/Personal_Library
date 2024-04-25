@@ -11,7 +11,7 @@ function ViewBook() {
   const location = useLocation();
   const results = location.state;
   const navigate = useNavigate();
-  console.log(results)
+
   // variables to access components upon rendering and display data about selected book
   const [result, setResult] = useState();
   const [display, setDisplay] = useState(false);

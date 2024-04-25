@@ -9,7 +9,7 @@ function HomePageRow({ row }) {
       <div>
         <Link
           to="/ViewBook"
-          state={row}
+          state={row.title}
         >
           <img src={row.image} alt="" height={300} width={200}></img>
         </Link>
