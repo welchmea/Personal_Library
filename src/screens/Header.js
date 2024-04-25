@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <>
-      <div className="flex justify-between mt-4 ml-2 mr-2">
+      <div className="flex flex-wrap justify-between mt-4 ml-2 mr-2">
         <div className="flex items-end text-xl text-white ml-2">MY BOOKSHELF</div>
-        <div className="flex flex-row">
+        <div className="flex flex-row flex-wrap">
           <SearchBar />
 
           <Link to="/">
