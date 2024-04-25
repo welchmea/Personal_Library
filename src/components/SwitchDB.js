@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import {useEffect} from "react";
 
 // switches a book from the queue to the library on the Queue page
 export default function SwitchDb ({id}){
@@ -15,10 +15,10 @@ export default function SwitchDb ({id}){
               }) 
               .then((response) => response.json())
               .then(() => {
-              alert(window.location.reload(false))
+              window.location.reload(false)
               })
         };      
     switchDB();
-    }, []);
+    }, [id]);
     
 };
