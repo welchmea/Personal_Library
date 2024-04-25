@@ -1,30 +1,18 @@
 import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
-import Search from "./Search";
 
 function SearchBar() {
   //Updates the input box and naviagtes to the results page
   const [input, setInput] = useState("");
-  const [book, setBook] = useState([]);
   const navigate = useNavigate();
 
-  const retrieveQuery = async () => {
-    await fetch(`https://be-bookshelf-eb8a2587c2db.herokuapp.com/?input=${input}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setBook(data.items)
-        // navigate('/Search', { state: book })
-        setInput('')
-     })
-     .catch((err)=>console.log(err));
-}
-
-  function handleKeyDown(e) {
+  const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-        retrieveQuery()
+      navigate('/Search', { state: input })
+      setInput('');
     }
-  }
+  };
   return (
     <>
       <div className="flex items-center justify-center">
@@ -37,7 +25,7 @@ function SearchBar() {
           onKeyDown={(e) => handleKeyDown(e)}
         ></input>
 
-        <Link to="/Search" state={book}>
+        <Link to="/Search" state={input}>
           <BsSearch className="text-slate-200 text-md mr-8" />
         </Link>
       </div>
