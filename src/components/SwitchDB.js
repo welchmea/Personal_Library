@@ -14,15 +14,11 @@ export default function SwitchDb ({id}){
                 body: JSON.stringify(id)
               }) 
               .then((response) => response.json())
-              .then((data) => {
-              alert(data, window.location.reload(false))
+              .then(() => {
+              alert(window.location.reload(false))
               })
         };      
     switchDB();
     }, []);
     
-//     return (
-//         <>
-//         </>
-//     )
 };
