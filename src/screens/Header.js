@@ -10,25 +10,25 @@ function Header() {
           <SearchBar />
 
           <Link to="/">
-            <button className="text-black mr-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
+            <button className="text-black mr-1 mt-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
               Home
             </button>
           </Link>
 
           <Link to="/Library">
-            <button className="text-black mr-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
+            <button className="text-black mr-1 mt-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
               Bookshelf
             </button>
           </Link>
 
           <Link to="/Queue">
-            <button className="text-black mr-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
+            <button className="text-black mr-1 mt-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
               Queue
             </button>
           </Link>
 
           <Link to="/Favorites">
-            <button className="text-black mr-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
+            <button className="text-black mr-1 mt-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
               Favorites
             </button>
           </Link>
