@@ -23,7 +23,7 @@ function Queue() {
       return queue;
     }
     displayQueue();
-  }, [queue]);
+  }, []);
 
   return (
     <>

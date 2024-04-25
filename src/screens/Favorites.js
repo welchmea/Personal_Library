@@ -26,7 +26,7 @@ function Favorites() {
       return favorites;
     }
     displayBooks();
-  }, [favorites]);
+  }, []);
 
   return (
     <>

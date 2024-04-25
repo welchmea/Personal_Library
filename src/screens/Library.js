@@ -23,7 +23,7 @@ function Library() {
       return library;
     }
     displayBooks();
-  }, [library]);
+  }, []);
 
   return (
     <>

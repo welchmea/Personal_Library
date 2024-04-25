@@ -20,7 +20,9 @@ function Search() {
         .then((response) => response.json())
         .then((data) => {
           setBook(data.items);
-        });
+        })
+        .catch((err)=> console.log(err))
+        
       return book;
     }
     findBooks();

@@ -6,12 +6,12 @@ import { AiOutlineCheck, AiOutlinePlusCircle } from "react-icons/ai";
 import { Tooltip } from "@mui/material";
 
 function ViewBook() {
+
   // retrieves data from useState which was set in components Library Row and Queue Row
   const location = useLocation();
   const results = location.state;
-
   const navigate = useNavigate();
-
+  console.log(results)
   // variables to access components upon rendering and display data about selected book
   const [result, setResult] = useState();
   const [display, setDisplay] = useState(false);
@@ -27,17 +27,18 @@ function ViewBook() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(results.title),
+        body: JSON.stringify(results),
       })
         .then((response) => response.json())
         .then((data) => {
           setResult(data);
           setDisplay(true);
-        });
+        })
+        .catch((err)=>console.log(err));
       return result;
     }
     displayInfo();
-  }, [result, results.title]);
+  }, []);
 
   // code taken from React navigation: url:https://reactnavigation.org/docs/navigation-prop/
   const goBack = () => {

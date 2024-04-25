@@ -20,7 +20,7 @@ function Books() {
   const goBack = () => {
     navigate(-1);
   };
-
+  console.log(result)
   return (
     <>
       <div className="flex flex-col items-center p-2 overflow-auto">
