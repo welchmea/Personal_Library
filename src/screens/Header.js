@@ -5,8 +5,8 @@ function Header() {
   return (
     <>
       <div className="flex flex-wrap justify-between mt-4 ml-2 mr-2">
-        <div className="flex items-end text-xl text-white ml-2">MY BOOKSHELF</div>
-        <div className="flex flex-row flex-wrap">
+        <div className="flex items-center mr-8 text-xl text-white ml-2">MY BOOKSHELF</div>
+        <div className="flex flex-row flex-wrap ">
           <SearchBar />
 
           <Link to="/">
