@@ -1,4 +1,4 @@
-# Frontend of SWE Project: My Bookshelf
+# Frontend of SWE Project: Personal Library
 
 Deployed to Heroku: https://fe-bookshelf-6bdf6bf741e2.herokuapp.com
 
@@ -13,18 +13,3 @@ Deployed to Heroku: https://fe-bookshelf-6bdf6bf741e2.herokuapp.com
 ### 2. Install dependencies
 
       npm install    
-      
-### 4. Setup .env files
-
-frontend:
-
-      CONNECT_BACK=
-
-backend:
-
-      MONGO_DB_CONN_STRING=
-   
-
-
-
-
