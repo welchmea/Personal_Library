@@ -26,7 +26,7 @@ function Books() {
       <div className="flex flex-col items-center p-2 overflow-auto">
         <div className="text-white p-12 text-3xl">Discover new ideas.</div>
         <div className="text-white pb-12 text-xl">
-          <button className="main-button" onClick={goBack}>
+          <button id="back" className="main-button" onClick={goBack}>
             Back to Search Results
           </button>
         </div>
@@ -55,13 +55,13 @@ function Books() {
           <div className="flex justify-center p-2">
             <AddBrowse result={result} />
             <Tooltip title="Add to Bookshelf">
-              <button onClick={() => setRender(true)}>
+              <button id="toolip-render" onClick={() => setRender(true)}>
                 <AiOutlineCheck className="text-lg mr-2" />
               </button>
             </Tooltip>
             {render ? <AddLibrary result={result} /> : null}
             <Tooltip title="Add to Queue">
-              <button onClick={() => setRenderQueue(true)}>
+              <button id="tooltip-set" onClick={() => setRenderQueue(true)}>
                 <AiOutlinePlusCircle className="text-lg" />
               </button>
             </Tooltip>

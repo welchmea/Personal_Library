@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 function AddFavorite(props) {
-    const alreadyFetched = useRef(false);
 
     // adds data to MongoDB favorites collection
     useEffect(() => {
@@ -19,14 +18,8 @@ function AddFavorite(props) {
               alert(data)
               })  
         }
-    if (alreadyFetched.current) return;
-    alreadyFetched.current = true;
     postData();
-    }, [props]);
-    return (
-        <>
-        </>
-)
+    }, []);
 
 };
 export default AddFavorite;

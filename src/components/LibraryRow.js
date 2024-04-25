@@ -27,7 +27,7 @@ function LibraryRow({ row }) {
       <div className="flex flex-wrap mb-2 font-normal">{row.author[0]}</div>
       <div className="flex flex-row">
         <div className="flex flex-col text-xl">
-          <button className="" onClick={() => setaddFavorite(true)}>
+          <button id="favorite" className="" onClick={() => setaddFavorite(true)}>
             <i>
               <AiOutlineHeart className="mr-4" />
             </i>
@@ -36,7 +36,7 @@ function LibraryRow({ row }) {
         </div>
 
         <div className="flex text-xl">
-          <button onClick={verifyDelete}>
+          <button id="delete" onClick={verifyDelete}>
             <i>
               <AiFillDelete />
             </i>

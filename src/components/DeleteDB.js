@@ -1,9 +1,7 @@
 import {useEffect, useRef} from "react";
 
 function DeleteDb ({id}){
-
-    const alreadyFetched = useRef(false);
-    
+  
     //deletes a book from the queue or the library 
     useEffect(() => {
         function deleteDB() {
@@ -20,9 +18,7 @@ function DeleteDb ({id}){
               alert(data, window.location.reload(false))
               })  
         };
-    if (alreadyFetched.current) return;
-    alreadyFetched.current = true;
     deleteDB();
-    }, [id]);
+    }, []);
 };
 export default DeleteDb;

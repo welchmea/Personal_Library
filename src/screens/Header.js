@@ -9,26 +9,26 @@ function Header() {
         <div className="flex flex-row flex-wrap ">
           <SearchBar />
 
-          <Link to="/">
-            <button className="text-black mr-1 mt-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
+          <Link id="nav-home" to="/">
+            <button id="nav-button-home" className="text-black mr-1 mt-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
               Home
             </button>
           </Link>
 
-          <Link to="/Library">
-            <button className="text-black mr-1 mt-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
+          <Link  id="nav-bs" to="/Library">
+            <button id="nav-button-bs" className="text-black mr-1 mt-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
               Bookshelf
             </button>
           </Link>
 
-          <Link to="/Queue">
-            <button className="text-black mr-1 mt-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
+          <Link id="nav-queue"  to="/Queue">
+            <button id="nav-button-queue" className="text-black mr-1 mt-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
               Queue
             </button>
           </Link>
 
-          <Link to="/Favorites">
-            <button className="text-black mr-1 mt-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
+          <Link  id="nav-fav" to="/Favorites">
+            <button id="nav-button-fav" className="text-black mr-1 mt-1 bg-stone-200 rounded-lg p-2 font-normal hover:bg-gray-300">
               Favorites
             </button>
           </Link>

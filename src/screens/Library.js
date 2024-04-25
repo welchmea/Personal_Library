@@ -33,7 +33,7 @@ function Library() {
         </div>
         <div className="text-white pb-12 text-xl">
           {" "}
-          <button className="main-button" onClick={() => navigate("/")}>
+          <button id="back" className="main-button" onClick={() => navigate("/")}>
             Back to Home Page
           </button>
         </div>
@@ -41,7 +41,7 @@ function Library() {
       <div className="flex flex-row w-full justify-between mb-2 text-sm text-white">
       <div className="flex justify-end ml-4">Bookshelf </div>
         <div className="flex underline text-white mr-4">
-            <button onClick={() => ResetDB("books")}>reset</button>
+            <button id="reset" onClick={() => ResetDB("books")}>reset</button>
           </div>
       </div>
 

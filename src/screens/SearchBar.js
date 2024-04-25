@@ -25,12 +25,12 @@ function SearchBar() {
           onKeyDown={(e) => handleKeyDown(e)}
         ></input>
 
-        <Link to="/Search" state={input}>
+        <Link id="search" to="/Search" state={input}>
           <BsSearch className="text-slate-200 text-md mr-8" />
         </Link>
       </div>
     </>
-  );
+  )
 }
 
 export default SearchBar;

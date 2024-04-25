@@ -36,7 +36,7 @@ function Favorites() {
         </div>
         <div className="text-white pb-12 text-xl">
           {" "}
-          <button className="main-button" onClick={() => navigate("/")}>
+          <button id="back" className="main-button" onClick={() => navigate("/")}>
             Back to Home Page
           </button>
         </div>
@@ -45,7 +45,7 @@ function Favorites() {
           <div className="flex justify-end ml-4">Favorites</div>
 
           <div className="flex underline text-white mr-4">
-            <button onClick={() => ResetDB("favorites")}>reset</button>
+            <button id="reset" onClick={() => ResetDB("favorites")}>reset</button>
           </div>
         </div>
       <div className="search_results text-white">

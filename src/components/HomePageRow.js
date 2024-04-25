@@ -8,6 +8,7 @@ function HomePageRow({ row }) {
     <div key={row.title}>
       <div>
         <Link
+          id="display-visited"
           to="/ViewBook"
           state={row.title}
         >

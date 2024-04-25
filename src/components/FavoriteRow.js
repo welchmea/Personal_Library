@@ -18,7 +18,7 @@ function FavoriteRow ({row}) {
     return (
       <div className="text-white" key={row.title}>
       <div className="flex flex-wrap items-center mb-4">
-        <Link to="/ViewBook" state={row.title}>
+        <Link id="view-details" to="/ViewBook" state={row.title}>
           <img src={row.image} alt="" height={300} width={200}></img>
         </Link>
       </div>
@@ -26,7 +26,7 @@ function FavoriteRow ({row}) {
       <div className="flex flex-wrap mb-2 font-normal">{row.author[0]}</div>
       <div className="flex flex-row">
         <div className="flex text-xl">
-          <button onClick={verifyDelete}>
+          <button id="delete" onClick={verifyDelete}>
             <i>
               <AiFillDelete />
             </i>

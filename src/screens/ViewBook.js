@@ -79,13 +79,13 @@ function ViewBook() {
             </div>
             <div className="flex justify-center p-2">
               <Tooltip title="Add to Bookshelf">
-                <button onClick={() => setRender(true)}>
+                <button id="tooltip-render" onClick={() => setRender(true)}>
                   <AiOutlineCheck className="text-lg mr-2" />
                 </button>
               </Tooltip>
               {render ? <AddLibrary result={result} /> : null}
               <Tooltip title="Add to Queue">
-                <button onClick={() => setRenderQueue(true)}>
+                <button id="tooltip" onClick={() => setRenderQueue(true)}>
                   <AiOutlinePlusCircle className="text-lg" />
                 </button>
               </Tooltip>

@@ -1,9 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 function AddLibrary(props) {
     
-    const alreadyFetched = useRef(false);
-
     // adds data to MongoDB books collection
     useEffect(() => {
         function postData() {
@@ -20,14 +18,7 @@ function AddLibrary(props) {
               alert(data)
               })  
         }
-    if (alreadyFetched.current) return;
-    alreadyFetched.current = true;
     postData();
-    }, [props]);
-    return (
-        <>
-        </>
-)
-
+    }, []);
 };
 export default AddLibrary;

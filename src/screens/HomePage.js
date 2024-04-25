@@ -34,7 +34,7 @@ function HomePage() {
           <div className="flex justify-end ml-4">Recently Visited</div>
 
           <div className="flex underline text-white mr-4">
-            <button onClick={() => ResetDB("browse")}>reset</button>
+            <button id="reset" onClick={() => ResetDB("browse")}>reset</button>
           </div>
         </div>
         <div className="search_results flex flex-wrap w-full p-8 gap-8">

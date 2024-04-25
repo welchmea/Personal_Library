@@ -1,9 +1,7 @@
 import React, {useEffect, useRef} from "react";
 
 // switches a book from the queue to the library on the Queue page
-function SwitchDb ({id}){
-
-    const alreadyFetched = useRef(false);
+export default function SwitchDb ({id}){
 
     useEffect(() => {
         function switchDB() {
@@ -20,15 +18,11 @@ function SwitchDb ({id}){
               alert(data, window.location.reload(false))
               })
         };      
-    if (alreadyFetched.current) return;
-    alreadyFetched.current = true;
     switchDB();
-    }, [id]);
+    }, []);
     
-    return (
-        <>
-        </>
-    )
+//     return (
+//         <>
+//         </>
+//     )
 };
-
-export default SwitchDb;

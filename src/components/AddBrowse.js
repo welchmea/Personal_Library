@@ -1,8 +1,6 @@
-import {useEffect, useRef} from "react";
+import {useEffect } from "react";
 
 function AddBrowse(props) {
-
-    const alreadyFetched = useRef(false); 
     
     // adds data to MongoDb browse collection
     useEffect(() => {
@@ -17,10 +15,8 @@ function AddBrowse(props) {
               })
               .then((response) => response.json())
         }
-    if (alreadyFetched.current) return;
-    alreadyFetched.current = true;
     postBrowse();
-    }, [props]);
+    }, []);
 };
 
 export default AddBrowse;

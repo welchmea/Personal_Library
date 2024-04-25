@@ -1,9 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 function AddQueue(props) {
 
-  const alreadyFetched = useRef(false);
-    
     // adds data to MongoDB queue collection
     useEffect(() => {
         function postData() {
@@ -20,15 +18,8 @@ function AddQueue(props) {
               alert(data)
               }) 
         }
-    if (alreadyFetched.current) return;
-    alreadyFetched.current = true;
     postData();
-    }, [props]);
+    }, []);
     
-    return (
-        <>
-        </>
-)
-
 };
 export default AddQueue;

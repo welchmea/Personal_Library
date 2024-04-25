@@ -31,7 +31,7 @@ function Queue() {
         <div className="text-white p-12 text-3xl">Queue up your next read.</div>
         <div className="text-white pb-12 text-xl">
           {" "}
-          <button className="main-button" onClick={() => navigate("/")}>
+          <button id="back" className="main-button" onClick={() => navigate("/")}>
             Back to Home Page
           </button>
         </div>
@@ -40,7 +40,7 @@ function Queue() {
           <div className="flex justify-end ml-4">Queue</div>
 
           <div className="flex underline text-white mr-4">
-            <button onClick={() => ResetDB("queue")}>reset</button>
+            <button id="reset" onClick={() => ResetDB("queue")}>reset</button>
           </div>
         </div>
 

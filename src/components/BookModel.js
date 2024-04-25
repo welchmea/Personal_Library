@@ -13,7 +13,7 @@ function BookModel (props) {
       <p>{props.author}</p>
       </figcaption>
       <button className="main-button">
-      <Link to="/Books" state={props}>More Info</Link><br/>
+      <Link id="view-book-details" to="/Books" state={props}>More Info</Link><br/>
       </button>
     </figure>
 
