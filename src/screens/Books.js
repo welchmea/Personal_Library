@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import AddLibrary from "../components/AddLibrary";
+import AddQueue from "../components/AddQueue";
 import { AiOutlineCheck, AiOutlinePlusCircle } from "react-icons/ai";
 import AddBrowse from "../components/AddBrowse";
 import { Tooltip } from "@mui/material";
-import BookRowProp from "../components/BookRowProp";
 
 function Books() {
   // variables for rendering different components, navigation, and retrieving info using state.
@@ -58,13 +59,13 @@ function Books() {
                 <AiOutlineCheck className="text-lg mr-2" />
               </button>
             </Tooltip>
-            {render ? <BookRowProp result={result} page='add_db'/> : null}
+            {render ? <AddLibrary result={result} /> : null}
             <Tooltip title="Add to Queue">
               <button id="tooltip-set" onClick={() => setRenderQueue(true)}>
                 <AiOutlinePlusCircle className="text-lg" />
               </button>
             </Tooltip>
-            {renderQueue ? <BookRowProp result={result} page='add_queue' /> : null}
+            {renderQueue ? <AddQueue result={result} /> : null}
           </div>
         </div>
       </div>

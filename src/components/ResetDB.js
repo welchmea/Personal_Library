@@ -15,9 +15,10 @@ export const ResetDB = async ( collection ) => {
         );
       }
       const data = await response.json();
+      window.location.reload(false)
       return data;
     } catch (error) {
       console.error("Error:", error);
-      throw error; // Re-throw the error to propagate it to the caller
+      throw error; // Re-throw the error
     }
   };

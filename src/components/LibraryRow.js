@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { AiFillDelete } from "react-icons/ai";
-import BookRowProp from "./BookRowProp";
-
 import DeleteDb from "./DeleteDB";
-import BookRowIcon from "./BookRowIcon";
+import { AiFillDelete, AiOutlineHeart } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import AddFavorite from "./AddFavorite";
 
-// represents a row in the queue table results on the Queue page
-function BookRow({ row, page }) {
+// represents a row in the library on the Library page
+function LibraryRow({ row }) {
   const [render, setRender] = useState(false);
-  const [rerender, setRerender] = useState(false);
+  const [addFavorite, setaddFavorite] = useState(false);
 
   // asks user if they want to delete before it is deleted.
   function verifyDelete() {
@@ -20,7 +18,7 @@ function BookRow({ row, page }) {
 
   return (
     <div className="text-white" key={row.title}>
-      <div className="flex flex-wrap items-center mb-4">
+      <div className="flex flex-wrap items-center mb-4 transition ease-in-out bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300">
         <Link to="/ViewBook" state={row.title}>
           <img src={row.image} alt="" height={300} width={200}></img>
         </Link>
@@ -29,10 +27,12 @@ function BookRow({ row, page }) {
       <div className="flex flex-wrap mb-2 font-normal">{row.author[0]}</div>
       <div className="flex flex-row">
         <div className="flex flex-col text-xl">
-          <button id="render" className="" onClick={() => setRerender(true)}>
-            <BookRowIcon page={page} />
+          <button id="favorite" className="" onClick={() => setaddFavorite(true)}>
+            <i>
+              <AiOutlineHeart className="mr-4" />
+            </i>
           </button>
-          {rerender ? <BookRowProp id={row} page={page} /> : null}
+          {addFavorite ? <AddFavorite result={row} /> : null}
         </div>
 
         <div className="flex text-xl">
@@ -48,4 +48,4 @@ function BookRow({ row, page }) {
   );
 }
 
-export default BookRow;
+export default LibraryRow;

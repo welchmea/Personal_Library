@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import BookRow from "../components/BookRow";
+import FavoriteRow from "../components/FavoriteRow";
 import { ResetDB } from "../components/ResetDB";
 
 function Favorites() {
@@ -51,7 +51,7 @@ function Favorites() {
       <div className="search_results text-white">
         <div className="flex flex-wrap gap-8 p-8 w-full">
           {state
-            ? favorites.map((book, i) => <BookRow row={book} page='add_fav' key={i} />)
+            ? favorites.map((book, i) => <FavoriteRow row={book} key={i} />)
             : null}
         </div>
       </div>

@@ -1,11 +1,11 @@
-import React, {useEffect, useRef} from "react";
+import {useEffect} from "react";
 
 // switches a book from the queue to the library on the Queue page
-export default function BookRowProp ({id, page}){
+export default function SwitchDb ({id}){
 
     useEffect(() => {
-        function BookRowAction() {
-        fetch(`https://be-bookshelf-eb8a2587c2db.herokuapp.com/${page}`, {
+        function switchDB() {
+        fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/switch_db', {
                 mode: 'cors',
                 method: 'POST',
                 headers: {
@@ -15,12 +15,10 @@ export default function BookRowProp ({id, page}){
               }) 
               .then((response) => response.json())
               .then(() => {
-              alert(window.location.reload(false))
+              window.location.reload(false)
               })
         };      
     switchDB();
-    }, []);
-    BookRowAction();
     }, [id]);
     
 };
