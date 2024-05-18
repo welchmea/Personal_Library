@@ -18,7 +18,7 @@ function LibraryRow({ row }) {
 
   return (
     <div className="text-white" key={row.title}>
-      <div className="flex flex-wrap items-center mb-4">
+      <div className="flex flex-wrap items-center mb-4 transition ease-in-out bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300">
         <Link to="/ViewBook" state={row.title}>
           <img src={row.image} alt="" height={300} width={200}></img>
         </Link>
