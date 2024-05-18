@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import AddLibrary from "../components/AddLibrary";
-import AddQueue from "../components/AddQueue";
 import { AiOutlineCheck, AiOutlinePlusCircle } from "react-icons/ai";
 import { Tooltip } from "@mui/material";
+import BookRowProp from "../components/BookRowProp";
 
 function ViewBook() {
 
@@ -83,13 +82,13 @@ function ViewBook() {
                   <AiOutlineCheck className="text-lg mr-2" />
                 </button>
               </Tooltip>
-              {render ? <AddLibrary result={result} /> : null}
+              {render ? <BookRowProp result={result} page='add_db' /> : null}
               <Tooltip title="Add to Queue">
                 <button id="tooltip" onClick={() => setRenderQueue(true)}>
                   <AiOutlinePlusCircle className="text-lg" />
                 </button>
               </Tooltip>
-              {renderQueue ? <AddQueue result={result} /> : null}
+              {renderQueue ? <BookRowProp result={result} page='add_queue'/> : null}
             </div>
           </div>
         ) : null}

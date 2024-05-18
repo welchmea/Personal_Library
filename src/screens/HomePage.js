@@ -39,7 +39,7 @@ function HomePage() {
         </div>
         <div className="search_results flex flex-wrap w-full p-8 gap-8">
           {state
-            ? library.map((book, i) => <HomePageRow row={book} key={i} />)
+            ? library.map((book, i) => <HomePageRow row={book} page='home' key={i} />)
             : null}
         </div>
       </div>

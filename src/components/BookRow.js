@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import DeleteDb from "./DeleteDB";
-import { AiFillDelete, AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import AddFavorite from "./AddFavorite";
+import { AiFillDelete } from "react-icons/ai";
+import BookRowProp from "./BookRowProp";
 
-// represents a row in the library on the Library page
-function LibraryRow({ row }) {
+import DeleteDb from "./DeleteDB";
+import BookRowIcon from "./BookRowIcon";
+
+// represents a row in the queue table results on the Queue page
+function BookRow({ row, page }) {
   const [render, setRender] = useState(false);
-  const [addFavorite, setaddFavorite] = useState(false);
+  const [rerender, setRerender] = useState(false);
 
   // asks user if they want to delete before it is deleted.
   function verifyDelete() {
@@ -27,12 +29,10 @@ function LibraryRow({ row }) {
       <div className="flex flex-wrap mb-2 font-normal">{row.author[0]}</div>
       <div className="flex flex-row">
         <div className="flex flex-col text-xl">
-          <button id="favorite" className="" onClick={() => setaddFavorite(true)}>
-            <i>
-              <AiOutlineHeart className="mr-4" />
-            </i>
+          <button id="render" className="" onClick={() => setRerender(true)}>
+            <BookRowIcon page={page} />
           </button>
-          {addFavorite ? <AddFavorite result={row} /> : null}
+          {rerender ? <BookRowProp id={row} page={page} /> : null}
         </div>
 
         <div className="flex text-xl">
@@ -48,4 +48,4 @@ function LibraryRow({ row }) {
   );
 }
 
-export default LibraryRow;
+export default BookRow;
