@@ -17,7 +17,6 @@ function SearchBar() {
     <>
       <div className="flex items-center justify-center">
         <input
-          id="search"
           type="text"
           placeholder="Enter a Book Title or Author"
           className="mr-2 rounded-3xl p-1 pl-4 text-sm w-[80vw] sm:w-[90vw] md:w-[40vw] lg:w-[40vw] font-normal"
