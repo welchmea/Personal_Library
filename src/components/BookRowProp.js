@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 
 // switches a book from the queue to the library on the Queue page
 export default function BookRowProp ({id, page}){
@@ -15,9 +15,11 @@ export default function BookRowProp ({id, page}){
               }) 
               .then((response) => response.json())
               .then(() => {
-              window.location.reload(false)
+              alert(window.location.reload(false))
               })
         };      
+    switchDB();
+    }, []);
     BookRowAction();
     }, [id]);
     
