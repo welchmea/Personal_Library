@@ -4,7 +4,7 @@ import BackButton from "./BackButton";
 import Banner from "./Banner";
 import displayData from "./DisplayMethod";
 
-function ViewCard( {collection, title, label} ) {
+function ViewCard({ collection, title, label }) {
   // variables to display data in library and to render additional components
   const [library, setLibrary] = useState();
   const [state, setState] = useState(false);
@@ -20,7 +20,7 @@ function ViewCard( {collection, title, label} ) {
       <div className="flex flex-col items-center p-2 overflow-auto">
         <Banner
           title={title}
-          subTitle={<BackButton />}
+          subTitle={<BackButton title={"Back to Home Page"} />}
           label={label}
           collection={collection}
         />

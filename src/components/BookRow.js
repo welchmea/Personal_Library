@@ -8,7 +8,6 @@ import { HiSwitchHorizontal } from "react-icons/hi";
 
 // represents a row in the recently visited table on the Home page
 function BookRow({ row, page }) {
-
   const [actionOptions, setActionOptions] = useState(true);
   const [render, setRender] = useState(false);
   const [transfer, setTransfer] = useState(false);
@@ -37,16 +36,16 @@ function BookRow({ row, page }) {
           </div>
           <div className="flex flex-row space-x-4 mt-4 text-xl">
             <button id="reset" onClick={() => DeleteDB(page, row.title)}>
-              <AiFillDelete className="transition ease-in-out hover:scale-110 duration-100"/>
+              <AiFillDelete className="transition ease-in-out hover:scale-110 duration-100" />
             </button>
             <button id="favorite" onClick={() => setRender(true)}>
               <AiOutlineHeart className="transition ease-in-out hover:scale-110 duration-100" />
             </button>
-            {render ? <AddDB row={row} page='favorites' /> : null}
+            {render ? <AddDB row={row} page="favorites" /> : null}
             {transfer && (
               <button id="switch" onClick={() => SwitchDB(page, row.title)}>
-              <HiSwitchHorizontal className="transition ease-in-out hover:scale-110 duration-100"/>
-            </button>
+                <HiSwitchHorizontal className="transition ease-in-out hover:scale-110 duration-100" />
+              </button>
             )}
           </div>
         </>
