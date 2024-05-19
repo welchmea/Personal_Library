@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import { DeleteDB } from "./DeleteDB";
 import { AiFillDelete, AiOutlineHeart } from "react-icons/ai";
 import AddDB from "./AddDB";
+import { SwitchDB } from "./SwitchDB";
+import { HiSwitchHorizontal } from "react-icons/hi";
 
 // represents a row in the recently visited table on the Home page
 function BookRow({ row, page }) {
+
   const [actionOptions, setActionOptions] = useState(true);
   const [render, setRender] = useState(false);
+  const [transfer, setTransfer] = useState(false);
 
   useEffect(() => {
     if (page === "home") {
       setActionOptions(false);
+    }
+    if (page === "queue" || page === "library") {
+      setTransfer(true);
     }
   }, []);
 
@@ -36,6 +43,11 @@ function BookRow({ row, page }) {
               <AiOutlineHeart className="transition ease-in-out hover:scale-110 duration-100" />
             </button>
             {render ? <AddDB row={row} page='favorites' /> : null}
+            {transfer && (
+              <button id="switch" onClick={() => SwitchDB(page, row.title)}>
+              <HiSwitchHorizontal className="transition ease-in-out hover:scale-110 duration-100"/>
+            </button>
+            )}
           </div>
         </>
       )}
