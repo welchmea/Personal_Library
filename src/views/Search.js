@@ -14,7 +14,7 @@ function Search() {
   useEffect(() => {
     function findBooks() {
       // const query = inputs;
-      fetch(`http://127.0.0.1:5000/?input=${input}`, {
+      fetch(`https://be-bookshelf-eb8a2587c2db.herokuapp.com/?input=${input}`, {
         mode: "cors",
       })
         .then((response) => response.json())

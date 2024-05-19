@@ -1,7 +1,7 @@
 export const ResetDB = async ( collection ) => {
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/reset_db', {
+      const response = await fetch('https://be-bookshelf-eb8a2587c2db.herokuapp.com/reset_db', {
         mode: 'cors',
         method: 'POST',
         headers: {

@@ -1,5 +1,5 @@
 export default function displayData(collection, setLibrary, setState, setError) {
-  fetch(`http://127.0.0.1:5000/display/${collection}`, {
+  fetch(`https://be-bookshelf-eb8a2587c2db.herokuapp.com/display/${collection}`, {
     mode: "cors",
   })
     .then((response) => response.json())

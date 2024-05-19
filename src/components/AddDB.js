@@ -5,7 +5,7 @@ function AddDB(props) {
     // adds data to MongoDb browse collection
     useEffect(() => {
         function postData() {
-            fetch(`http://127.0.0.1:5000/${page}`, {
+            fetch(`https://be-bookshelf-eb8a2587c2db.herokuapp.com/${page}`, {
                 mode: 'cors',
                 method: 'POST',
                 headers: {

@@ -1,6 +1,6 @@
 export const DeleteDB = async ( collection, title ) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/delete_db/${collection}?title=${title}`, {
+      const response = await fetch(`https://be-bookshelf-eb8a2587c2db.herokuapp.com/delete_db/${collection}?title=${title}`, {
         mode: 'cors',
         method: 'POST',
         headers: {
