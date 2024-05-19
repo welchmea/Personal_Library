@@ -10,10 +10,11 @@ export const DeleteDB = async ( collection, title ) => {
       });
       if (!response.ok) {
         throw new Error(
-          `Failed to Delete Collection. Status: ${response.status}`,
+          `Failed to Delete the item from Collection. Status: ${response.status}`,
         );
       }
       const data = await response.json();
+      window.location.reload(false)
       return data;
     } catch (error) {
       console.error("Error:", error);
