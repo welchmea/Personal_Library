@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import AddLibrary from "../components/AddLibrary";
-import AddQueue from "../components/AddQueue";
 import { AiOutlineCheck, AiOutlinePlusCircle } from "react-icons/ai";
-import AddBrowse from "../components/AddBrowse";
+import AddDB from "../components/AddDB";
 import { Tooltip } from "@mui/material";
 
 function Books() {
@@ -13,14 +11,15 @@ function Books() {
 
   const location = useLocation();
   const result = location.state;
-
+    console.log(result)
   const navigate = useNavigate();
 
   //code on lines 20-22 taken from React navigation: url:https://reactnavigation.org/docs/navigation-prop/
   const goBack = () => {
     navigate(-1);
   };
-  console.log(result)
+  
+
   return (
     <>
       <div className="flex flex-col items-center p-2 overflow-auto">
@@ -30,7 +29,7 @@ function Books() {
             Back to Search Results
           </button>
         </div>
-        <div className="flex flex-col w-5/6 images text-lg p-4">
+        <div className="flex flex-col w-5/6 bg-[#FFF7F7] text-lg p-4">
           <div className="flex flex-row">
             <div className="p-2 place-content-center ml-8">
               <img
@@ -53,19 +52,19 @@ function Books() {
             </div>
           </div>
           <div className="flex justify-center p-2">
-            <AddBrowse result={result} />
+            <AddDB row={result} page='browse'/>
             <Tooltip title="Add to Bookshelf">
               <button id="toolip-render" onClick={() => setRender(true)}>
                 <AiOutlineCheck className="text-lg mr-2" />
               </button>
-            </Tooltip>
-            {render ? <AddLibrary result={result} /> : null}
+            </Tooltip> 
+            {render ? <AddDB row={result} page='library' /> : null}
             <Tooltip title="Add to Queue">
               <button id="tooltip-set" onClick={() => setRenderQueue(true)}>
                 <AiOutlinePlusCircle className="text-lg" />
               </button>
-            </Tooltip>
-            {renderQueue ? <AddQueue result={result} /> : null}
+            </Tooltip> 
+            {renderQueue ? <AddDB row={result} page='queue' /> : null}
           </div>
         </div>
       </div>

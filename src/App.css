@@ -1,13 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap');
-
-:root {
- --robinblue:rgb(197, 233, 252)
- --purplehaze:rgb(184, 129, 171)
-}
 
 body {
   font-family: 'Spectral', serif;
@@ -16,50 +7,4 @@ body {
   font-weight: 600;
   overflow: scroll !important;
   background-color: black;
-}
-
- .search_results {
-  background-image: linear-gradient(180deg ,#5A66F4, rgb(0,0,0,0.5));
- }
-
- .images {
-  background-color: rgb(255, 247, 247);
- }
-
-.main-button {
-  background-color: rgb(231, 225, 225);
-  border-radius: 10px;
-  color: black;
-  font-weight: 400;
-  font-size: 18px;
-  padding: 4px;
-  line-height: 30px;
-  text-align: center;
-  touch-action: manipulation;
-  width: 30vh;
-}
-
-.main-button:hover {
-  background-color:#5A66F4;
-  color: white;
-}
-
-.pop-image{
-  background-color:rgb(241, 232, 232) ;
-  display:inline-block;
-  border: 2px solid black;
-  max-width:fit-content;
-}
-.img-cap {
-  padding:1%;
-}
-.back-popout{
-  border: 2px solid black;
-  background-color: rgb(54, 35, 53);
-  box-shadow: #422800 4px 4px 0 0;
-  color: white;
-  border-radius: 1em; 
-  font-size: 70%;
-  font-family: 'Spectral', serif;
-
 }
