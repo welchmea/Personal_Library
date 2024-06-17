@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useMemo, useState } from "react";
 import BookRow from "./BookRow";
 import BackButton from "./BackButton";
 import Banner from "./Banner";
@@ -11,7 +11,7 @@ function ViewCard({ collection, title, label }) {
   const [error, setError] = useState(false);
 
   // calls MongoDB library collection to display all data
-  useEffect(() => {
+  useMemo(() => {
     displayData(collection, setLibrary, setState, setError);
   }, []);
 

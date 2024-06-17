@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import BookRow from "../components/BookRow";
 import Banner from "../components/Banner";
 import displayData from "../components/DisplayMethod";
@@ -10,7 +10,7 @@ function HomePage() {
   const [error, setError] = useState(false);
 
   // calls MongoDB to retrieve last 14 viewed books
-  useEffect(() => {
+  useMemo(() => {
     displayData("browse", setLibrary, setState, setError);
   }, []);
 

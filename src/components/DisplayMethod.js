@@ -13,5 +13,4 @@ export default function displayData(
       setState(true);
     })
     .catch(() => setError(true));
-  return;
 }

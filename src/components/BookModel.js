@@ -19,6 +19,6 @@ function BookModel (props) {
 
     </>
   )
-};
+}
 
 export default BookModel;

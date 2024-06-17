@@ -12,7 +12,7 @@ export const DeleteDB = async (collection, title) => {
       }
     );
     if (!response.ok) {
-      throw new Error(
+      console.log(
         `Failed to Delete the item from Collection. Status: ${response.status}`
       );
     }

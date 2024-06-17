@@ -9,7 +9,7 @@ export const ResetDB = async (collection) => {
       body: JSON.stringify(collection),
     });
     if (!response.ok) {
-      throw new Error(
+      console.log(
         `Failed to Delete Collection. Status: ${response.status}`
       );
     }

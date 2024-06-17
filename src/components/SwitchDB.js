@@ -12,7 +12,7 @@ export const SwitchDB = async (collection, title) => {
       }
     );
     if (!response.ok) {
-      throw new Error(
+      console.log(
         `Failed to Swtich the item from Collection. Status: ${response.status}`
       );
     }

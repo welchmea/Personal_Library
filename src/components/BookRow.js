@@ -19,7 +19,7 @@ function BookRow({ row, page }) {
     if (page === "queue" || page === "library") {
       setTransfer(true);
     }
-  }, []);
+  }, [transfer, actionOptions]);
 
   return (
     <div key={row.title}>
